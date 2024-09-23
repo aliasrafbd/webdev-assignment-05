@@ -9,6 +9,5 @@ document.getElementById('btn-history').addEventListener('click', function() {
     document.getElementById('btn-history').classList.add('bg-custom-col-green');
     document.getElementById('btn-donation').classList.remove('bg-custom-col-green');
     document.getElementById('footer-bg').classList.remove('bg-yellow-50');
-    
 });
 

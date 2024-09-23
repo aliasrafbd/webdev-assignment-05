@@ -1,6 +1,7 @@
 function getInputFieldValueById(id) {
     const inputValue = document.getElementById(id).value;
-    const inputNumber = Number(inputValue).toFixed(2);
+    const inputNumber = parseFloat(Number(inputValue).toFixed(2));
+    console.log(inputNumber);
     return inputNumber;
 }
 
@@ -25,8 +26,9 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
             const previousAmount = getTextFieldValueById(accountBalance);
             const totalDonationLeft = getTextFieldValueById('total-amount-left');
 
-            const currentAmount = previousAmount + donatedAmount;
+            const currentAmount = parseFloat(previousAmount) + donatedAmount;
             const donationLeft = totalDonationLeft - donatedAmount;
+            console.log(currentAmount);
 
             document.getElementById(accountBalance).innerText = currentAmount;
             document.getElementById('total-amount-left').innerText = donationLeft;
@@ -38,7 +40,7 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
             const div = document.createElement('div');
             const p = document.createElement('p');
             const h6 = document.createElement('h6');
-            p.innerText = `${donatedAmount} taka is ${donatedWhere}`;
+            p.innerText = `${donatedAmount} taka ${donatedWhere}`;
 
             const now = new Date();
             const formattedDate = now.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, timeZoneName: 'short' });
@@ -49,7 +51,7 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
             
             parentDiv.appendChild(div);
 
-            document.getElementsByTagName(`${div}`).styles.background
+        //    document.getElementsByTagName(`${div}`).styles.background
 
         }
         else {

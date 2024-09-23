@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Assignment 05</title>
+
+    <!-- Enable DaisyUI and TailwindCSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Script for changing color and others  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'clifford': '#da373d',
+                        'custom-col-green': '#B4F461',
+                        'custom-col-black': '#1C1C1C',
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header class="bg-yellow-50 pt-4 pb-2">
+        <nav class="container w-9/12 mx-auto mb-6">
+            <div id="nav-bar" class="nav-bar flex justify-between">
+                <div class="blog"><button id="btn-home" class="btn bg-custom-col-green w-28">Home</button></div>
+                <div class="flex gap-2 items-center">
+                    <div><img src="assets/logo.png" alt=""></div>
+                    <h2>Donate Bangladesh</h2>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <div><img src="assets/coin.png" alt=""></div>
+                    <h2 class="donate-amount-left">5500</h2><span>BDT</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container w-9/12 mx-auto flex flex-col mt-6">
+        <h1 class="text-5xl mb-6">Important FAQ</h1>
+        <div class="collapse collapse-arrow border rounded-none">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is Document Object Model</div>
+            <div class="collapse-content">
+                <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow border rounded-none">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from DOM</div>
+            <div class="collapse-content">
+                <p>We can select an element from DOM by using ID or Class Name or Other Query Selector</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow border rounded-none">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">What is event Delegation? What are the benefits on it</div>
+            <div class="collapse-content">
+                <p>Event delegation is the process that we can add event at parent node instead of child node. That way can help us to add new child of that parent. It is better way to add an element</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow border rounded-none">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">How can you add an attribute by Javascript</div>
+            <div class="collapse-content">
+                <p>We can add an attribute like ad one or multiple class by adding ClassList.add or We can remove class by Classlist.remove function</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="js/navigation.js"></script>
+</body>
+
+</html>

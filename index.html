@@ -12,8 +12,17 @@
 
     <style>
         #transaction-history h6 {
-            background-color: yellow;
+            background-color: rgb(218, 213, 213);
+            border-radius: 5px;
+            padding: 16px;
         }
+        #transaction-history > div {
+            border: 1px solid gray;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+        
     </style>
 
     <!-- Custom Script for changing color and others  -->
@@ -189,7 +198,7 @@
 
         <!-- History Section  -->
         <section id="history-section" class="history-section hidden container w-9/12 mx-auto mb-6">
-            <div id="transaction-history" class="flex flex-col gap-4 p-6">
+            <div id="transaction-history" class="flex flex-col gap-4 p-6 mb-2">
             </div>
         </section>
 

@@ -1,7 +1,7 @@
 const el1 = document.getElementById("btn-blog");
 if (el1) {
 el1.addEventListener('click',function() {
-    window.location.href = "/webdev-assignment-05/blog.html";
+    window.location.href = "./blog.html";
 });
 }
 

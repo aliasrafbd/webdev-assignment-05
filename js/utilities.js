@@ -49,21 +49,7 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
             
             parentDiv.appendChild(div);
 
-            document.getElementsByTagName(`${div}`).classList.add('border');
-            
-
-            // const p = document.createElement('p');
-            // p.innerText = `${donatedAmount} taka is ${donatedWhere}`;
-            // const div = document.getElementById('transaction-history');
-            // div.appendChild(p);
-
-            // const now = new Date();
-            // const formattedDate = now.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, timeZoneName: 'short' });
-            
-            // const h6 = document.createElement('h6');
-            // h6.innerText = `Date: ${formattedDate}`;
-            // div.appendChild(h6);
-          //  document.getElementsByTagName('h6', 'p').classList.add('border');
+            document.getElementsByTagName(`${div}`).styles.background
 
         }
         else {

@@ -1,7 +1,6 @@
 function getInputFieldValueById(id) {
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(Number(inputValue).toFixed(2));
-    console.log(inputNumber);
     return inputNumber;
 }
 
@@ -28,14 +27,14 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
 
             const currentAmount = parseFloat(previousAmount) + donatedAmount;
             const donationLeft = totalDonationLeft - donatedAmount;
-            console.log(currentAmount);
 
             document.getElementById(accountBalance).innerText = currentAmount;
             document.getElementById('total-amount-left').innerText = donationLeft;
 
             const donatedWhere = document.getElementById(donatedFor).innerText;
-            // add to transaction history
 
+
+            // add to transaction history
             const parentDiv = document.getElementById('transaction-history');
             const div = document.createElement('div');
             const p = document.createElement('p');
@@ -54,7 +53,10 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
 
         }
         else {
-            alert("Donation should be number and greater than 0");
+            alert("Donation should be number and greater than 0 or cannot empty");
             document.getElementById(modalId).classList.add('hidden');
         }
+        document.getElementById('input-donate-now-n').value = '';
+        document.getElementById('input-donate-now-f').value = '';
+        document.getElementById('input-donate-now-q').value = '';
 }

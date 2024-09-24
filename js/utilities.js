@@ -43,7 +43,7 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
             p.innerText = `${donatedAmount} taka ${donatedWhere}`;
 
             const now = new Date();
-            // console.log(now);
+            
             // const formattedDate = now.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, timeZoneName: 'short'});
             h6.innerText = `Date: ${now}`;
 

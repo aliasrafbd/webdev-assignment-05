@@ -49,42 +49,44 @@
         <h1 class="text-5xl mb-6 text-center">Important FAQ</h1>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" checked="checked" />
-            <div class="collapse-title text-xl font-medium">What is Document Object Model</div>
+            <div class="collapse-title text-xl font-medium">What is Document Object Model (DOM)</div>
             <div class="collapse-content">
-                <p>Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access</p>
+                <p>DOM or Document Object Model is a model of HTML. DOM makes object of html elements so that Javascript can easily interact with html elements.</p>
             </div>
         </div>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
             <div class="collapse-title text-xl font-medium">How do you select an element from DOM</div>
             <div class="collapse-content">
-                <p>We can select an element from DOM by using ID or Class Name or Other Query Selector</p>
+                <p>We can select an element from DOM by using ID or Class Name or any other Query Selector</p>
             </div>
         </div>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
             <div class="collapse-title text-xl font-medium">How would you manipulate the DOM using JavaScript?</div>
             <div class="collapse-content">
-                <p>JavaScript manipulates the DOM by selecting elements and changing their properties or contents. The ‘document’ object is used to access the HTML document, with methods like getElementById() or querySelector() for selection.</p>
+                <p> Javascript manipulates the DOM by selecting elements by their id or class or tag name (using methods like getElementById, getElementsByClassName, getElementsByTagName, etc.) and change their internal content by using innerText or innerHTML.</p>
             </div>
         </div>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
             <div class="collapse-title text-xl font-medium">What is DOM tree and DOM nodes?</div>
             <div class="collapse-content">
-                <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree, known as the DOM tree. Each element in this tree is called a node. There are several types of nodes including Element Nodes, Text Nodes, and Attribute Nodes.</p>
+                <p> DOM treats html tags as a tree structure. HTML tag is the root of the document. Inside HTML tag, there are body and head tag. They are the children of HTML tag. body may have lots of div and section. they are the children of body tag. Every elements in HTML structure treat that way. So everything is looks like a tree. Every html tag is a DOM node.</p>
             </div>
         </div>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
             <div class="collapse-title text-xl font-medium">How is event propagation handled in the DOM?</div>
             <div class="collapse-content">
-                <p class="text-justify">Event propagation in the DOM is managed through three phases: capturing, target, and bubbling. 
-                    In the capturing phase, the event descends from the root to the target node.
-                    The target phase involves the event being handled at the target node.
-                    Finally, during the bubbling phase, the event bubbles up from the target node back to the root.
-
-                    Event handlers can be registered for any of these phases, but by default, they are set for the bubbling phase. To stop propagation, the method stopPropagation() can be used. This prevents further propagation of the current event in the capturing and bubbling phases.</p>
+                <h3 class="text-lg font-extrabold">In event Propagation, there are three phases:</h3>
+                <p class="text-justify">
+                    1. Capturing 2. Target 3. Bubbling. <br>
+                    In the capturing phase, the event work from top to bottom. Root node to target node. This is called Capturing phase.
+                    When event handle at the target node that is called Target phase  
+                    and 
+                    Finally, In bubbling phase, the event bubbles that means it will work from the target node to top of the node or root node. Event handler can trigger any of these three phases. But by default in DOM, it is trigger at bubbling phase. We can prevent default nature by applying stopPropagation() method. This method ensure the event handling at the target phase. Prevent the event handling from capturing and bubbling phase
+                </p>
             </div>
         </div>
     </main>

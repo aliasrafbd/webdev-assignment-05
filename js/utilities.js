@@ -53,7 +53,7 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
 
         }
         else {
-            alert("Donation should be number and greater than 0 or cannot empty");
+            alert("Donation should be a number greater than zero and cannot empty");
             document.getElementById(modalId).classList.add('hidden');
         }
         document.getElementById('input-donate-now-n').value = '';

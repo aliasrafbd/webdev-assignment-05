@@ -21,10 +21,9 @@ function showSectionById(id) {
 
 function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor) {
     const donatedAmount = getInputFieldValueById(idInput);
-        if(donatedAmount > 0 && typeof(donatedAmount) !== 'NaN') {
+    const totalDonationLeft = getTextFieldValueById('total-amount-left');
+        if(donatedAmount > 0 && typeof(donatedAmount) !== 'NaN' && donatedAmount <= totalDonationLeft) {
             const previousAmount = getTextFieldValueById(accountBalance);
-            const totalDonationLeft = getTextFieldValueById('total-amount-left');
-
             const currentAmount = parseFloat(previousAmount) + donatedAmount;
             const donationLeft = totalDonationLeft - donatedAmount;
 
@@ -53,10 +52,8 @@ function InnerTextBalanceCalculator(idInput, accountBalance, modalId, donatedFor
 
         }
         else {
-            alert("Donation should be a number greater than zero and cannot empty");
+            alert("Donation should be a number greater than zero, less than total funding and cannot empty");
             document.getElementById(modalId).classList.add('hidden');
         }
-        document.getElementById('input-donate-now-n').value = '';
-        document.getElementById('input-donate-now-f').value = '';
-        document.getElementById('input-donate-now-q').value = '';
+        document.getElementById(idInput).value = '';
 }

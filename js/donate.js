@@ -13,7 +13,6 @@ document.getElementById('btn-donate-now-f')
         InnerTextBalanceCalculator('input-donate-now-f', 'account-balance-feni', 'my_modal_f', 'donate-for-f');
 });
 
-
 // Donation Calculation for Quota 
 document.getElementById('btn-donate-now-q')
     .addEventListener('click', function(event){

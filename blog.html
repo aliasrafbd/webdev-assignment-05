@@ -29,29 +29,29 @@
 </head>
 
 <body>
-    <header class="bg-yellow-50 pt-4 pb-2">
-        <nav class="container w-9/12 mx-auto mb-6">
-            <div id="nav-bar" class="nav-bar flex justify-between">
-                <div class="blog"><button id="btn-home" class="btn bg-custom-col-green w-28">Home</button></div>
-                <div class="flex gap-2 items-center">
+    <header class="bg-yellow-50 pt-4 pb-2 sticky top-0">
+        <nav class="lg:container w-full lg:w-9/12 mx-auto mb-6">
+            <div id="nav-bar" class="nav-bar flex gap-8 lg:gap-0 justify-between">
+                <div class="blog"><button id="btn-blog" class="btn bg-custom-col-green w-16 lg:w-28 lg:ml-0 ml-4">Blog</button></div>
+                <div class="flex gap-2 items-center lg:ml-0 ml-8">
                     <div><img src="assets/logo.png" alt=""></div>
-                    <h2>Donate Bangladesh</h2>
+                    <h2 class="text-sm lg:text-xl font-semibold">Donate Bangladesh</h2>
                 </div>
                 <div class="flex gap-2 items-center">
                     <div><img src="assets/coin.png" alt=""></div>
-                    <h2 class="donate-amount-left">5500</h2><span>BDT</span>
+                    <h2 id="total-amount-left" class="total-amount-left font-semibold text-lg">5500</h2><span>BDT</span>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container w-9/12 mx-auto flex flex-col mt-6">
-        <h1 class="text-5xl mb-6">Important FAQ</h1>
+    <main class="lg:container lg:w-9/12 mx-2 mx-auto flex flex-col mt-6">
+        <h1 class="text-5xl mb-6 text-center">Important FAQ</h1>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is Document Object Model</div>
             <div class="collapse-content">
-                <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access</p>
+                <p>Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access</p>
             </div>
         </div>
         <div class="collapse collapse-arrow border rounded-none">
@@ -63,16 +63,28 @@
         </div>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
-            <div class="collapse-title text-xl font-medium">What is event Delegation? What are the benefits on it</div>
+            <div class="collapse-title text-xl font-medium">How would you manipulate the DOM using JavaScript?</div>
             <div class="collapse-content">
-                <p>Event delegation is the process that we can add event at parent node instead of child node. That way can help us to add new child of that parent. It is better way to add an element</p>
+                <p>JavaScript manipulates the DOM by selecting elements and changing their properties or contents. The ‘document’ object is used to access the HTML document, with methods like getElementById() or querySelector() for selection.</p>
             </div>
         </div>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
-            <div class="collapse-title text-xl font-medium">How can you add an attribute by Javascript</div>
+            <div class="collapse-title text-xl font-medium">What is DOM tree and DOM nodes?</div>
             <div class="collapse-content">
-                <p>We can add an attribute like ad one or multiple class by adding ClassList.add or We can remove class by Classlist.remove function</p>
+                <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree, known as the DOM tree. Each element in this tree is called a node. There are several types of nodes including Element Nodes, Text Nodes, and Attribute Nodes.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow border rounded-none">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">How is event propagation handled in the DOM?</div>
+            <div class="collapse-content">
+                <p class="text-justify">Event propagation in the DOM is managed through three phases: capturing, target, and bubbling. 
+                    In the capturing phase, the event descends from the root to the target node.
+                    The target phase involves the event being handled at the target node.
+                    Finally, during the bubbling phase, the event bubbles up from the target node back to the root.
+
+                    Event handlers can be registered for any of these phases, but by default, they are set for the bubbling phase. To stop propagation, the method stopPropagation() can be used. This prevents further propagation of the current event in the capturing and bubbling phases.</p>
             </div>
         </div>
     </main>

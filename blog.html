@@ -10,6 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        .nav-bg {
+            background-color: rgba(249, 219, 151, 0.4);
+        }
+    </style>
+
     <!-- Custom Script for changing color and others  -->
     <script>
         tailwind.config = {
@@ -29,19 +35,21 @@
 </head>
 
 <body>
-    <header class="bg-yellow-50 pt-4 pb-2 sticky top-0">
-        <nav class="lg:container w-full lg:w-9/12 mx-auto mb-6">
-            <div id="nav-bar" class="nav-bar flex gap-8 lg:gap-0 justify-between">
-                <div class="home"><button id="btn-home" class="btn bg-custom-col-green w-16 lg:w-28 lg:ml-0 ml-4">Home</button></div>
-                <div class="flex gap-2 items-center lg:ml-0 ml-8">
-                    <div><img src="assets/logo.png" alt=""></div>
-                    <h2 class="text-sm lg:text-xl font-semibold">Donate Bangladesh</h2>
+    <header class="sticky top-0 backdrop-blur-3xl">
+        <nav class="nav-bg pt-4 pb-8">
+            <section class="lg:container w-full lg:w-9/12 mx-auto">
+                <div id="nav-bar" class="nav-bar flex gap-8 lg:gap-0 justify-between">
+                    <div class="blog"><button id="btn-blog" class="btn bg-custom-col-green w-16 lg:w-28 lg:ml-0 ml-4">Blog</button></div>
+                    <div class="flex gap-2 items-center lg:ml-0 ml-8">
+                        <div><img src="assets/logo.png" alt=""></div>
+                        <h2 class="text-sm lg:text-xl font-semibold">Donate Bangladesh</h2>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <div><img src="assets/coin.png" alt=""></div>
+                        <h2 id="total-amount-left" class="total-amount-left font-semibold text-lg">5500</h2><span>BDT</span>
+                    </div>
                 </div>
-                <div class="flex gap-2 items-center">
-                    <div><img src="assets/coin.png" alt=""></div>
-                    <h2 id="total-amount-left" class="total-amount-left font-semibold text-lg">5500</h2><span>BDT</span>
-                </div>
-            </div>
+            </section>
         </nav>
     </header>
 

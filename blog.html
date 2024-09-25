@@ -12,7 +12,7 @@
 
     <style>
         .nav-bg {
-            background-color: rgb(249, 219, 151);
+            background-color: rgba(249, 219, 151, 0.4);
         }
     </style>
 
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <header class="backdrop-blur-3xl">
+    <header class="sticky top-0 backdrop-blur-3xl z-30">
         <nav class="nav-bg pt-4 pb-8">
             <section class="lg:container w-full lg:w-9/12 mx-auto">
                 <div id="nav-bar" class="nav-bar flex gap-8 lg:gap-0 justify-between">
@@ -50,7 +50,7 @@
         </nav>
     </header>
 
-    <main class="lg:container lg:w-9/12 mx-2 mx-auto flex flex-col mt-6">
+    <main class="lg:container lg:w-9/12 mx-2 mx-auto flex flex-col mt-6 -z-10">
         <h1 class="text-5xl mb-6 text-center">Important FAQ</h1>
         <div class="collapse collapse-arrow border rounded-none">
             <input type="radio" name="my-accordion-4" />
